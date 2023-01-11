@@ -3,6 +3,7 @@ import styles from "./CreatePost.module.css"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { useAuthValue } from "../../context/AuthContext"
+import { useInsertDocument } from "../../hooks/useInsertDocument"
 
 const CreatePost = () => {
   const [title, setTitle] = useState("")
@@ -10,9 +11,34 @@ const CreatePost = () => {
   const [body, setBody] = useState("")
   const [tags, setTags] = useState("")
   const [formError, setFormError] = useState("")
+
+  const {user} = useAuthValue()
+
+  const {insertDocument, response} = useInsertDocument("posts")
   
   const handleSubmit = (e) => {
     e.preventDefault()
+    setFormError("")
+
+    //validate image URL
+
+    
+    //create tags array
+
+
+    //check all values
+
+
+    insertDocument({
+      title,
+      image,
+      body,
+      tags,
+      uid: user.uid,
+      createBy: user.displayName
+    })
+
+    //redirect to home page
   }
 
   return (
@@ -41,9 +67,9 @@ const CreatePost = () => {
             <input type="text" name="tags" required placeholder="Insira as tags separadas por vírgula." onChange={(e) => setTags(e.target.value)} value={tags}/>
           </label>
 
-          {/* {!loading && <button className='btn'>Cadastrar</button>}
-          {loading && <button className='btn' disabled>Aguarde...</button>}
-          {error && <p className='error'>{error}</p>} */}
+          {!response.loading && <button className='btn'>Cadastrar</button>}
+          {response.loading && <button className='btn' disabled>Aguarde...</button>}
+          {response.error && <p className='error'>{response.error}</p>}
         </form>
     </div>
   )
