@@ -4,11 +4,11 @@ import { Link } from "react-router-dom"
 
 const PostDetail = ({post}) => {
   return (
-    <div>
-        <img src={post.image} alt={post.title} />
+    <div className={styles.post_detail}>
+        <div className={styles.bg_img}><img src={post.image} alt={post.title} /></div>
         <h2>{post.title}</h2>
-        <p>{post.createdBy}</p>
-        <div>
+        <p className={styles.createdby}>{post.createdBy}</p>
+        <div className={styles.tags}>
             {post.tagsArray.map((tag) => (
                 <p key={tag}><span>#</span>{tag}</p>
             ))}
