@@ -3,7 +3,7 @@
 }
 
 .post_detail .bg_img{
-    width: 600px;
+    width: 800px;
     height: 450px;
     background-color: #ddd;
 
@@ -13,7 +13,7 @@
 }
 
 .post_detail img{
-    max-width: 600px;
+    max-width: 800px;
     max-height: 450px; 
 }
 

@@ -1,0 +1,33 @@
+.post_container{
+    text-align: center;
+}
+
+.post_container h3{
+    margin-bottom: .2em;
+}
+
+.post_container .tags{
+    display: flex;
+    justify-content: center;
+}
+
+.tags p{
+    margin-right: 1em;
+}
+
+.tags span{
+    font-weight: bold;
+}
+
+.post_container img{
+    max-width: 1280px;
+    max-height: 720px;
+}
+
+.post_container .bg_post{
+    margin: auto;
+    
+    width: 1280px;
+    height: 720px;
+    background-color: #ddd;
+}
