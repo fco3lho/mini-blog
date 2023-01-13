@@ -23,11 +23,11 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
             try {
                 let q
 
-                //search
-                //dashboard
-
                 if(search){
                     q = await query(collectionRef, where("tagsArray", "array-contains", search), orderBy("createAt", "desc"))
+                }
+                else if(uid){
+                    q = await query(collectionRef, where("uid", "==", uid), orderBy("createAt", "desc"))
                 }
                 else{
                     q = await query(collectionRef, orderBy('createdAt', 'desc'))
@@ -41,14 +41,11 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
                         }))
                     )
                 })
-
-                setLoading(false)
             } catch (error) {
                 console.log(error)
                 setError(error.message)
-
-                setLoading(false)
             }
+            setLoading(false)
         }
 
         loadData()
