@@ -27,4 +27,4 @@ Este projeto consiste em um blog feito com React no front-end e Firebase no back
 
 ## 🔗 Como acessar
 
-Você pode acessar a aplicação clicando <a href="mini-blog-inky.vercel.app">aqui</a>.
+Você pode acessar a aplicação clicando <a href="https://mini-blog-inky.vercel.app">aqui</a>.
