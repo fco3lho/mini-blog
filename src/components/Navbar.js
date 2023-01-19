@@ -15,9 +15,13 @@ const Navbar = () => {
             Mini <span>Blog</span>
         </NavLink>
         <ul className={styles.links_list}>
-            <li>
-                <NavLink to="/" className={({isActive}) => (isActive ? styles.active : "")}>Home</NavLink>
-            </li>
+            {user && (
+                <>
+                    <li>
+                        <NavLink to="/" className={({isActive}) => (isActive ? styles.active : "")}>Home</NavLink>
+                    </li>
+                </>
+            )}
             
             {!user && (
                 <>
