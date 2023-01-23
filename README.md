@@ -3,7 +3,7 @@
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-como-acessar">Como acessar</a>
+  <a href="#-como-utilizar-em-sua-máquina">Como utilizar em sua máquina</a>
 </p>
 
 <br>
@@ -25,6 +25,11 @@ Este projeto consiste em um blog feito com React no front-end e Firebase no back
     <li>Rotas de navegação para diferentes áreas do blog.</li>
 </ul>
 
-## 🔗 Como acessar
+## 🔗 Como utilizar em sua máquina
 
-Você pode acessar a aplicação clicando <a href="https://mini-blog-inky.vercel.app">aqui</a>.
+<ol>
+  <li>Clone o repositório utilizando o comando <code>git clone https://github.com/fco3lho/mini-blog.git</code>.</li>
+  <li>Instale todas as dependências do projeto utilizando o comando <code>npm install</code> na pasta do projeto.</li>
+  <li>Inicie o servidor utilizando <code>npm start</code>.</li>
+  <li>Abra a aplicação em seu navegador na porta mostrada em seu terminal, normalmente sendo <code>http://localhost:3000</code>.</li>
+</ol>
